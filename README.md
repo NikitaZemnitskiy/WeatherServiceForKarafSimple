@@ -29,3 +29,5 @@ Then, you can install the service blueprint provider feature:
 ```
 karaf@root()> feature:install karaf-rest-weather-provider
 ```
+
+<repository>mvn:org.apache.cxf.karaf/apache-cxf/${cxf.version}/xml/features</repository>
