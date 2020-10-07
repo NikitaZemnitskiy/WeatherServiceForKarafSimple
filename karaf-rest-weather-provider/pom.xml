@@ -26,16 +26,6 @@
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>com.nix.zemnitskiy</groupId>
-            <artifactId>karaf-rest-weather-cassandra</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.nix.zemnitskiy</groupId>
-            <artifactId>karaf-rest-weather-camel</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
             <groupId>com.fasterxml.jackson.jaxrs</groupId>
             <artifactId>jackson-jaxrs-json-provider</artifactId>
             <version>${jackson.version}</version>

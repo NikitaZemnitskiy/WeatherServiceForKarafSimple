@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <features name="karaf-rest-weather-${project.version}" xmlns="http://karaf.apache.org/xmlns/features/v1.4.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://karaf.apache.org/xmlns/features/v1.4.0">
-    <repository>mvn:org.apache.cxf.karaf/apache-cxf/${cxf.version}/xml/features</repository>
-    <repository>mvn:org.apache.camel.karaf/apache-camel/${camel.version}/xml/features</repository>
+    <!--<repository>mvn:org.apache.cxf.karaf/apache-cxf/${cxf.version}/xml/features</repository>-->
 
     <feature name="karaf-rest-weather-api" version="${project.version}">
         <bundle>mvn:com.nix.zemnitskiy/karaf-rest-weather-api/${project.version}</bundle>
         <bundle>mvn:com.fasterxml.jackson.core/jackson-annotations/${jackson.version}</bundle>
-        <bundle>mvn:com.savoirtech.hecate/hecate-annotation/${hecate.version}</bundle>
         <bundle>mvn:org.apache.cxf/cxf-rt-rs-security-cors/${cxf.version}</bundle>
     </feature>
 
     <feature name="karaf-rest-weather-provider" version="${project.version}">
         <feature version="${project.version}">karaf-rest-weather-api</feature>
-        <feature>karaf-rest-weather-cassandra</feature>
-        <feature>karaf-rest-weather-camel</feature>
         <feature>http</feature>
         <requirement>osgi.service;effective:=active;filter:=(objectClass=org.osgi.service.http.HttpService)</requirement>
         <feature>aries-blueprint</feature>
@@ -23,28 +19,6 @@
         <bundle>mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-base/${jackson.version}</bundle>
         <bundle>mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-json-provider/${jackson.version}</bundle>
         <bundle>mvn:com.nix.zemnitskiy/karaf-rest-weather-provider/${project.version}</bundle>
-    </feature>
-
-    <feature name="karaf-rest-weather-cassandra" version="${project.version}">
-        <bundle>mvn:io.dropwizard.metrics/metrics-core/${metrics-core.version}</bundle>
-        <bundle>mvn:com.datastax.cassandra/cassandra-driver-core/${cassandra-driver.version}</bundle>
-        <bundle>mvn:com.google.guava/guava/${guava.version}</bundle>
-        <bundle>mvn:io.netty/netty-handler/${netty.version}</bundle>
-        <bundle>mvn:io.netty/netty-buffer/${netty.version}</bundle>
-        <bundle>mvn:io.netty/netty-common/${netty.version}</bundle>
-        <bundle>mvn:io.netty/netty-transport/${netty.version}</bundle>
-        <bundle>mvn:io.netty/netty-codec/${netty.version}</bundle>
-        <bundle>mvn:com.savoirtech.hecate/hecate-pojo/${hecate.version}</bundle>
-        <bundle>mvn:com.savoirtech.hecate/hecate-core/${hecate.version}</bundle>
-        <bundle>mvn:org.apache.commons/commons-lang3/${commons-lang3.version}</bundle>
-        <bundle>mvn:com.nix.zemnitskiy/karaf-rest-weather-cassandra/${project.version}</bundle>
-    </feature>
-
-    <feature name="karaf-rest-weather-camel" version="${project.version}">
-        <feature>camel</feature>
-        <feature>camel-mail</feature>
-        <feature>camel-blueprint</feature>
-        <bundle>mvn:com.nix.zemnitskiy/karaf-rest-weather-camel/${project.version}</bundle>
     </feature>
 
 </features>

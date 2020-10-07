@@ -26,12 +26,7 @@
             <artifactId>jackson-jaxrs-json-provider</artifactId>
             <version>${jackson.version}</version>
         </dependency>
-        <dependency>
-            <groupId>com.savoirtech.hecate</groupId>
-            <artifactId>hecate-annotation</artifactId>
-            <version>${hecate.version}</version>
-            <scope>compile</scope>
-        </dependency>
+
         <dependency>
             <groupId>org.apache.cxf</groupId>
             <artifactId>cxf-rt-rs-security-cors</artifactId>

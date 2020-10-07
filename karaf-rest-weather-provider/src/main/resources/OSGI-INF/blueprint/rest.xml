@@ -38,13 +38,8 @@
         </jaxrs:providers>
     </jaxrs:server>
 
-    <reference id="weatherDaoImplBean" interface="com.nix.zemnitskiy.karaf.weather.rest.cassandra.WeatherDao"/>
-    <reference id="camelMailSenderImplBean" interface="com.nix.zemnitskiy.karaf.weather.rest.camel.CamelMailSender"/>
-
     <bean id="providerWeatherBean" class="com.nix.zemnitskiy.karaf.weather.rest.provider.ProviderWeatherServiceImpl">
          <argument ref = "webClient"/>
-         <argument ref= "weatherDaoImplBean"/>
-         <argument ref= "camelMailSenderImplBean"/>
     </bean>
 
     <bean id="weatherBean" class="com.nix.zemnitskiy.karaf.weather.rest.provider.WeatherServiceImpl">
