@@ -5,6 +5,7 @@
            xmlns:jaxrs="http://cxf.apache.org/blueprint/jaxrs"
            xmlns:cxf="http://cxf.apache.org/blueprint/core"
            xmlns:client="http://cxf.apache.org/blueprint/jaxrs-client"
+           xmlns:cm="http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.1.0"
            xsi:schemaLocation="
              http://www.osgi.org/xmlns/blueprint/v1.0.0 http://www.osgi.org/xmlns/blueprint/v1.0.0/blueprint.xsd
              http://cxf.apache.org/blueprint/jaxrs http://cxf.apache.org/schemas/blueprint/jaxrs.xsd
@@ -38,8 +39,17 @@
         </jaxrs:providers>
     </jaxrs:server>
 
+    <cm:property-placeholder persistent-id="com.nix.zemnitskiy.karaf.ApiSettings">
+        <cm:default-properties>
+            <cm:property name="provider.weather.key" value="testKey"/>
+            <cm:property name="provider.units" value="testUnits"/>
+        </cm:default-properties>
+    </cm:property-placeholder>
+
     <bean id="providerWeatherBean" class="com.nix.zemnitskiy.karaf.weather.rest.provider.ProviderWeatherServiceImpl">
          <argument ref = "webClient"/>
+         <argument value="${provider.weather.key}"/>
+         <argument value="${provider.units}"/>
     </bean>
 
     <bean id="weatherBean" class="com.nix.zemnitskiy.karaf.weather.rest.provider.WeatherServiceImpl">
