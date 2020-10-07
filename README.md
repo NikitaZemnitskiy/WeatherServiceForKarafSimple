@@ -29,12 +29,12 @@ karaf@root()> feature:install karaf-rest-weather-provider
 ```
 
 
-##com.nix.zemnitskiy.karaf.ApiSettings.cfg 
+## com.nix.zemnitskiy.karaf.ApiSettings.cfg 
 
  provider.weather.key=9bc9127b5ca9be05751bd273761634d4
  provider.units=metric
 
-##org.apache.karaf.features
+## org.apache.karaf.features
 
 featuresRepositories = \
     mvn:org.apache.karaf.features/framework/4.2.8/xml/features, \
