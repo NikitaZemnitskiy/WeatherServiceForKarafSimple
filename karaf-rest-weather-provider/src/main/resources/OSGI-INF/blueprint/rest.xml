@@ -39,7 +39,7 @@
         </jaxrs:providers>
     </jaxrs:server>
 
-    <cm:property-placeholder persistent-id="com.nix.zemnitskiy.karaf.ApiSettings">
+    <cm:property-placeholder persistent-id="com.nix.zemnitskiy.karaf.ApiSetting">
         <cm:default-properties>
             <cm:property name="provider.weather.key" value="testKey"/>
             <cm:property name="provider.units" value="testUnits"/>
