@@ -9,9 +9,7 @@ import com.nix.zemnitskiy.karaf.weather.rest.api.Weather;
 public class ProviderWeatherServiceImpl implements ProvideWeatherService {
     private final WebClient webClient;
     private final String weatherKey;
-    //  = "9bc9127b5ca9be05751bd273761634d4";
     private final  String units;
-    // = "metric"
 
     public Weather getWeatherByCity(String city) {
         System.out.println(weatherKey);
