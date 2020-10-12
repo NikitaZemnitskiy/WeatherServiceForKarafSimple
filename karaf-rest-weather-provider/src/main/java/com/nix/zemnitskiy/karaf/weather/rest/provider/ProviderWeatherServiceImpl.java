@@ -7,8 +7,8 @@ import com.nix.zemnitskiy.karaf.weather.rest.api.Weather;
 
 @RequiredArgsConstructor
 public class ProviderWeatherServiceImpl implements ProvideWeatherService {
-    private static final String WEATHER_KEY = "9bc9127b5ca9be05751bd273761634d4";
-    private final static String UNITS = "metric";
+    private final String WEATHER_KEY;
+    private final String UNITS;
     private final WebClient webClient;
 
     public Weather getWeatherByCity(String city) {
