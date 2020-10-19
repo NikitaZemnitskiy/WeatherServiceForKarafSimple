@@ -30,4 +30,4 @@ Then, you can install the service blueprint provider feature:
 karaf@root()> feature:install karaf-rest-weather-provider
 ```
 
-<repository>mvn:org.apache.cxf.karaf/apache-cxf/${cxf.version}/xml/features</repository>
+Here you need to change the file name in karaf-rest-weather-provider/rest.xml from com.nix.zemnitskiy.karaf.ApiSetting to com.nix.zemnitskiy.karaf.ApiSettings
