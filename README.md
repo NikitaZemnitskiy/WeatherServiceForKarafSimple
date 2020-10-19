@@ -65,3 +65,5 @@ featuresBoot = \
     kar/4.2.8
 
 Endpoint to check - http://localhost:8181/cxf/weather/city/london
+
+<extensions>true</extensions> in karaf-rest-weather-provider pom.xml
