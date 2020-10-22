@@ -62,7 +62,6 @@
                 <version>3.5.1</version>
                 <extensions>true</extensions>
             </plugin>
-
         </plugins>
     </build>
 
