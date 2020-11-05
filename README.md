@@ -67,3 +67,5 @@ featuresBoot = \
 Endpoint to check - http://localhost:8181/cxf/weather/city/london
 
 TaskFive
+
+ Recursive dependency
