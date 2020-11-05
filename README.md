@@ -65,3 +65,4 @@ featuresBoot = \
     kar/4.2.8
 
 Endpoint to check - http://localhost:8181/cxf/weather/city/london
+<!-- <bundle>mvn:org.apache.commons/commons-math3/3.6.1</bundle>-->

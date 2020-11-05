@@ -11,4 +11,5 @@ public interface WeatherService {
     @Produces("application/json")
     @GET
     Weather getWeather(@PathParam("city") String city);
+
 }

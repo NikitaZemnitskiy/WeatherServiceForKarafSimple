@@ -14,4 +14,5 @@ public class WeatherServiceImpl implements WeatherService {
         Weather weather = providerWeatherServiceImpl.getWeatherByCity(city);
         return weather;
     }
+
 }
