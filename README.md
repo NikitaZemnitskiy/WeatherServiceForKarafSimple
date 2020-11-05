@@ -63,6 +63,5 @@ featuresBoot = \
     config/4.2.8, \
     karaf-rest-weather-provider/1.0.0, \
     kar/4.2.8
-
+ <bundle>mvn:org.apache.commons/commons-math3/3.6.1</bundle>
 Endpoint to check - http://localhost:8181/cxf/weather/city/london
-<!-- <bundle>mvn:org.apache.commons/commons-math3/3.6.1</bundle>-->
